@@ -1,0 +1,15 @@
+
+#Ignore log files
+*.log
+
+# Ignore compiled binaries
+*.exe
+*.dll
+/bin/
+/obj/
+
+# Visiual studio code (contains user-specific settings and configurations for Visual Studio Code.)
+.vscode/
+
+# Project specific settings
+/Properties/

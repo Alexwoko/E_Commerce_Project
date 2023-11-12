@@ -1,0 +1,9 @@
+In MySQL there is a difference between function and procedure.
+
+A function has to return a value and cannot return void.
+A procedure can return void and is often made up of multiple actions -
+for example taking in an input, concatinating with some predefined text and inserting it into two different tables.
+
+In my use, I want to affirm if addings are succesful or not. 
+So I count the current rownumbers before inserting, and checks if the table has grown afterwards. 
+I return 1 for succesful and 0 for not succesful
