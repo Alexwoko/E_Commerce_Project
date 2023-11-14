@@ -1,9 +1,9 @@
 DELETE FROM e_commerce_model.products;
 
 /* Dummy data for testing
-products (product_id INT, product_name VARCHAR(255), price DECIMAL(10,2), description TEXT, created_at TIMESTAMP)
+products (product_id INT, product_name VARCHAR(255), price DECIMAL(10,2), product_description TEXT, created_at TIMESTAMP)
 */
-INSERT INTO e_commerce_model.products (product_name, price, description)
+INSERT INTO e_commerce_model.products (product_name, price, product_description)
 VALUES('Shampoo', 24.95, 'This shampoo is amazing - try it!'),
 ('Toothpaste', 15.00, 'Keeps your breath fresh'),
 ('Shaving foam', 19.95, 'Smooth shaving foam with a smell of fresh air'),

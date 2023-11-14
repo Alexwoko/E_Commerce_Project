@@ -1,0 +1,24 @@
+---------------- || TERMINAL COMMANDS FOR DATABASE ||---------------------
+
+// START AND STOP DATABASE SERVER CONNECTION IN TERMINAL (BASH)
+// sudo /usr/local/mysql/support-files/mysql.server start
+// sudo /usr/local/mysql/support-files/mysql.server stop
+
+// LOG IN TO DATABASE:
+// sudo /usr/local/mysql/bin/mysql -u root -p
+// LOG OUT
+// Exit or Quit (Maybe followed by ;  if '->' press ctrl + c)
+
+// Name of database: e_commerce_db
+// Remember to have "USE e_commerce_db" in other scripts
+
+// Run sql scripts:
+// source /Users/alextao/ECommerceProject/ECommerceProject/Database/BuildDatabase/SQLBuildQueries/InsertDummyData.sql
+
+------------------------------ || GENEREL NOTES ON MYSQL AND DATABASE USE || ----------------------
+
+In MySQL there is a difference between function and procedure.
+
+A function has to return a value and cannot return void.
+A procedure can return void and is often made up of multiple actions -
+for example taking in an input, concatinating with some predefined text and inserting it into two different tables.

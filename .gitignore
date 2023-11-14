@@ -13,3 +13,5 @@
 
 # Project specific settings
 /Properties/
+appsettings.json
+appsettings.Development.json

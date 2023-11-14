@@ -1,0 +1,20 @@
+------------------------ || GIT NOTES || ----------------------
+
+
+// GIT repository:
+// https://github.com/Alexwoko/E_Commerce_Project.git
+
+// In bash context
+// In folder: /Users/alextao/ECommerceProject/ECommerceProject
+// Github
+// Pull: 
+// git pull origin master
+
+// Push: 
+
+Commit Changes Locally:
+// git add .
+// git commit -m "Your commit message"
+
+Push Changes to Remote:
+git push origin main
