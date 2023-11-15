@@ -36,9 +36,9 @@ FOREIGN KEY(default_billing_address_id) REFERENCES Addresses(address_id)
 
 CREATE TABLE e_commerce_model.ShippingDetails(
 shipping_details_id BIGINT AUTO_INCREMENT PRIMARY KEY,    
-first_name VARCHAR(50) NOT NULL,
-last_name VARCHAR(50) NOT NULL,
+customer_id BIGINT,
 address_id BIGINT,
+FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
 FOREIGN KEY(address_id) REFERENCES Addresses(address_id)
 );
 
@@ -55,7 +55,7 @@ CREATE TABLE e_commerce_model.Orders(
     order_id BIGINT AUTO_INCREMENT PRIMARY KEY, 
     customer_id BIGINT NOT NULL,
     order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    total_amount DECIMAL(10,2) NOT NULL CHECK (total_amount >= 0),
+    total_amount DECIMAL(10,2) DEFAULT 00.00 CHECK (total_amount >= 0),
     order_status VARCHAR(20) DEFAULT 'processing' CHECK (order_status IN ('processing', 'shipped', 'delivered')),
     payment_status VARCHAR(20) DEFAULT 'pending' CHECK (payment_status IN ('pending', 'paid', 'failed')),
     shipping_details_id BIGINT NOT NULL,

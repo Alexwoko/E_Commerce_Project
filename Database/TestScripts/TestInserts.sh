@@ -20,3 +20,6 @@ source AddProduct.sql;
 SELECT * FROM Products;
 EOF
 
+
+# WHEN TESTING INSERTION OF ORDER REMEMBER TO FIRST AddOrder.sql, THEN AddOrderItem AND LASTLY UpdOrderTotalPrice!
+

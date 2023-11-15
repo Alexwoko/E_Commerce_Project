@@ -12,9 +12,14 @@
 
 // Push: 
 
-Commit Changes Locally:
+Stage Changes:
 // git add .
+Commit Changes Locally:
 // git commit -m "Your commit message"
 
 Push Changes to Remote:
-git push origin main
+git push (origin main) // Only "origin main" if main isn't default by the u- flag --> See "new branch" under here. 
+
+New branch: The -u flag sets up the upstream to go directly to the new branch so in the future I can just write git push or
+git pull without the branch name
+git push -u origin new_branch

@@ -1,0 +1,2 @@
+- Update shipping and billing inserts to get the address ID by SELECT query on customer ID
+- Get unit price from Products where Product.product_id = @product_id
