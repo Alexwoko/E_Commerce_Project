@@ -17,6 +17,10 @@
 
 ------------------------------ || GENEREL NOTES ON MYSQL AND DATABASE USE || ----------------------
 
+USER: root
+Database: e_commerce_model
+
+
 In MySQL there is a difference between function and procedure.
 
 A function has to return a value and cannot return void.

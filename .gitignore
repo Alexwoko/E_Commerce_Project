@@ -15,3 +15,7 @@
 /Properties/
 appsettings.json
 appsettings.Development.json
+
+# Sensitive information
+/Database/BuildDatabase/BuildScripts/MasterBuildWithDummyData.sh
+/Database/Notes.txt

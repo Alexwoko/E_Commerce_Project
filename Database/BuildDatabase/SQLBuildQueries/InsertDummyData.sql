@@ -1,7 +1,5 @@
 DELETE FROM e_commerce_model.Products;
-DELETE FROM e_commerce_model.Addresses;
-DELETE FROM e_commerce_model.Customers;
-DELETE FROM e_commerce_model.ShippingDetails;
+
 
 ALTER TABLE e_commerce_model.Products AUTO_INCREMENT = 1;
 /* Dummy data for testing
@@ -18,7 +16,7 @@ VALUES('Shampoo', 24.95, 'This shampoo is amazing - try it!'),
 
 SELECT * FROM e_commerce_model.Products;
 
-
+DELETE FROM e_commerce_model.Addresses;
 ALTER TABLE e_commerce_model.Addresses AUTO_INCREMENT = 1;
 
 INSERT INTO e_commerce_model.Addresses(street_address, city, zip_code, country)
@@ -33,7 +31,7 @@ VALUES('Teststreet 23', 'Testcity', '5000', 'Testland'),
 SELECT * FROM e_commerce_model.Addresses;
 
 
-
+DELETE FROM e_commerce_model.Customers;
 ALTER TABLE e_commerce_model.Customers AUTO_INCREMENT = 1;
 
 INSERT INTO e_commerce_model.Customers(first_name, last_name, email, phone_number)
@@ -48,7 +46,7 @@ VALUES ('Test', 'Testesen', 'test@testesen.com', '12345678'),
 SELECT * FROM e_commerce_model.Customers;
 
 
-
+DELETE FROM e_commerce_model.ShippingDetails;
 ALTER TABLE e_commerce_model.ShippingDetails AUTO_INCREMENT = 1;
 
 INSERT INTO e_commerce_model.ShippingDetails(customer_id, address_id)
@@ -78,33 +76,6 @@ VALUES(1, '1111-1111-1111-1111', '2031-01-01', 1),
 
 SELECT * FROM e_commerce_model.BillingDetails;
 
-/*
-
-UPDATE e_commerce_model.Customers
-SET default_shipping_address_id = (
-    SELECT shipping_details_id
-    FROM e_commerce_model.ShippingDetails
-    WHERE e_commerce_model.ShippingDetails.customer_id = e_commerce_model.Customers.customer_id
-)
-WHERE EXISTS (
-    SELECT 1
-    FROM e_commerce_model.ShippingDetails
-    WHERE e_commerce_model.ShippingDetails.customer_id = e_commerce_model.Customers.customer_id
-);
-
-UPDATE e_commerce_model.Customers
-SET default_billing_address_id = (
-    SELECT billing_details_id
-    FROM e_commerce_model.BillingDetails
-    WHERE e_commerce_model.BillingDetails.customer_id = e_commerce_model.Customers.customer_id
-)
-WHERE EXISTS (
-    SELECT 1
-    FROM e_commerce_model.BillingDetails
-    WHERE e_commerce_model.BillingDetails.customer_id = e_commerce_model.Customers.customer_id
-);
-
-SELECT * FROM e_commerce_model.Customers;
 
 DELETE FROM e_commerce_model.Orders;
 ALTER TABLE e_commerce_model.Orders AUTO_INCREMENT = 1;
@@ -141,6 +112,8 @@ VALUES(1,
 );
 
 SELECT * FROM e_commerce_model.Orders;
+
+
 
 DELETE FROM e_commerce_model.OrderItems;
 ALTER TABLE e_commerce_model.OrderItems AUTO_INCREMENT = 1;
@@ -249,6 +222,3 @@ Where order_id = 7;
 
 SELECT * FROM e_commerce_model.Orders;
 
--- Finish by updating total amount in orders by summing OrderItems unit_price * amount
-
-*/
