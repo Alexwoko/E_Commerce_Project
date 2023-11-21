@@ -12,7 +12,7 @@ price DECIMAL(10, 2) NOT NULL CHECK (price >= 0),
 product_description TEXT,
 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
--- ALWAYS STORE ADDRESS DATE FIRST!
+-- ALWAYS STORE ADDRESS DATA FIRST!
 CREATE TABLE e_commerce_model.Addresses(
     address_id BIGINT AUTO_INCREMENT PRIMARY KEY,
     street_address VARCHAR(255) NOT NULL,

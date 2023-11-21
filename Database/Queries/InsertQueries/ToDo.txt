@@ -1,2 +1,4 @@
-- Update shipping and billing inserts to get the address ID by SELECT query on customer ID
-- Get unit price from Products where Product.product_id = @product_id
+✓ Update shipping and billing inserts to get the address ID by SELECT query on customer ID ✓
+✓ Get unit price from Products where Product.product_id = @product_id ✓
+✓ Insert Order without total_amount, insert OrderItems and update Order based on unit_price * quantity for all OrderItems
+with the same order_id. ✓

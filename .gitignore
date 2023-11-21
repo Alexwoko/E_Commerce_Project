@@ -19,3 +19,7 @@ appsettings.Development.json
 # Sensitive information
 /Database/BuildDatabase/BuildScripts/MasterBuildWithDummyData.sh
 /Database/Notes.txt
+
+# ToDO's
+/Database/TestScripts/ToDo.txt
+/Database/TestScripts/MasterTestScript.sh

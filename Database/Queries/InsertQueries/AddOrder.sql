@@ -9,7 +9,6 @@ VALUES(@customer_id,
 
 SELECT ROW_COUNT() AS success_indicator;
 
+-- Capture ID for OrderItems inserts
 SELECT LAST_INSERT_ID() AS order_id;
 
--- MAKE SELECT QUERY TO GET SHIPPING AND BILLING ID FROM CUSTOMER TABLE WHERE @customer_id = Customer.customer_id
--- IF IN DOUBT, LOOK AT DUMMY DATA SCRIPT

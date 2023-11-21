@@ -1,0 +1,4 @@
+- Check and fix ToDo's in folders
+- Testing:
+1. Test shipping- and billing address updates with both existing and non existing address
+2. 

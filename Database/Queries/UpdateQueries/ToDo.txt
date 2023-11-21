@@ -1,0 +1,5 @@
+✓ When updating shipping and billing addresses, automatically update Customer default_billing_address
+and/or default_shipping_address:
+Upd...DetalilAddress.sql should actually start as an update on Addresses with a new address ✓
+
+
