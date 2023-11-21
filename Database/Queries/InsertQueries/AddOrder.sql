@@ -10,5 +10,6 @@ VALUES(@customer_id,
 SELECT ROW_COUNT() AS success_indicator;
 
 -- Capture ID for OrderItems inserts
-SELECT LAST_INSERT_ID() AS order_id;
+--SELECT LAST_INSERT_ID() AS order_id;
+SET @order_id := LAST_INSERT_ID();
 
